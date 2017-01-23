@@ -18,13 +18,25 @@
 					<fieldset>
 						<legend>Votre message</legend>
 						<label for="pseudo">Pseudo: </label>
-						<input type="text" name="pseudo" id="pseudo"  /><br/><br/>
+						<input type="text" name="pseudo" id="pseudo" value="<?php if(isset($_COOKIE['nom'])){ echo $_COOKIE['nom'];}?>" /><br/><br/>
 						<label for="message">Message:</label>
 						<input type="text" name="message" id="message"/><br/><br/>
 						<input type="submit" value="Envoyer"/>
 					</fieldset>
 				</form>
 			</div>
+			<?php
+			//connexion BD
+			try
+			{
+				$bdd=new PDO('mysql:host=localhost;dbname=test;charset=utf8','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+			}
+			catch(Exception $e)
+			{
+				die('Erreur: '.$e->getMessage());
+			}
+			?>
+		</div>
 					
 	</body>
 </html>
