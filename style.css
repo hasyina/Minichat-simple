@@ -1,0 +1,16 @@
+body
+{width:600px;
+margin:auto;
+}
+.corps
+{border:solid 3px rgba(35,147,200,0.6);		
+background-color:rgba(35,147,200,0.1);
+}
+form,h1,h3,a
+{text-align:center;
+}
+a{text-decoration:none;
+color:blue;
+font-style:italic;}
+fieldset
+{width:300px;margin:auto;}
